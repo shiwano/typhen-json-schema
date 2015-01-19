@@ -53,7 +53,7 @@ module.exports = function(typhen, options) {
     handlebarsOptions: {
       data: options,
       partials: {
-        object: fs.readFileSync('./templates/object.hbs', 'utf-8')
+        object: fs.readFileSync(__dirname + '/templates/object.hbs', 'utf-8')
       },
       helpers: {
         escape: function(str) {
