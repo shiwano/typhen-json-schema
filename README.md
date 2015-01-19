@@ -3,19 +3,11 @@
 > A typhen plugin for JSON-Schema
 
 ## Getting Started
-_If you haven't used [typhen](https://github.com/shiwano/typhen) before, be sure to check out the README._
+If you haven't used [typhen](https://github.com/shiwano/typhen) before, be sure to check out the README.
 
-```bash
+```sh
 $ npm install -g typhen typhen-json-schema
 $ typhen --plugin typhen-json-schema --dest generated definitions.d.ts
-```
-
-or
-
-```bash
-$ npm install --save-dev typhen-json-schema
-$ vi typhenfile.js
-$ typhen
 ```
 
 ## The "typhen-json-schema" plugin
