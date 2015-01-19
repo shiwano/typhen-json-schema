@@ -1,0 +1,24 @@
+{
+  "companyId": ["AwesomeCompany", 42],
+  "persons": [
+    {
+      "firstName": "George",
+      "lastName": "Washington",
+      "birthday": "2014-02-11",
+      "address": {
+        "streetAddress": "3200 Mount Vernon Memorial Highway",
+        "city": "Mount Vernon",
+        "state": "Virginia",
+        "country": "United States"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "A green door",
+      "price": 12.50,
+      "tags": ["home", "green"]
+    }
+  ]
+}

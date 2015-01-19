@@ -1,0 +1,54 @@
+{
+  "name": "typhen-json-schema",
+  "description": "A typhen plugin for JSON-Schema",
+  "version": "0.1.0",
+  "homepage": "https://github.com/shiwano/typhen-json-schema",
+  "author": {
+    "name": "Shogo Iwano",
+    "email": "shiwano@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shiwano/typhen-json-schema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shiwano/typhen-json-schema/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shiwano/typhen-json-schema/blob/master/LICENSE"
+    }
+  ],
+  "main": "index",
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.4.0"
+  },
+  "scripts": {
+    "test": "./node_modules/gulp/bin/gulp.js"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "glob": "^4.3.2",
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-spawn-mocha": "^0.5.1",
+    "rimraf": "^2.2.8",
+    "run-sequence": "^1.0.2",
+    "tv4": "^1.1.5",
+    "tv4-formats": "^0.5.1",
+    "typhen": "^0.3.0"
+  },
+  "keywords": [
+    "typhen",
+    "jsonschema"
+  ],
+  "dependencies": {
+    "inflection": "^1.5.3",
+    "jsesc": "^0.5.0",
+    "lodash": "^2.4.1"
+  }
+}

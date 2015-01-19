@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Company",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "companyId": {
+      "type": "array",
+      "items": [
+        { "type": "string" },
+        { "type": "number" }
+      ]
+    },
+    "persons": {
+      "type": "array",
+      "items": {
+        "$ref": "http://example.com/typhen-json-schema/example/person.json"
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "$ref": "http://example.com/typhen-json-schema/example/product.json"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": ["companyId", "persons", "products"]
+}

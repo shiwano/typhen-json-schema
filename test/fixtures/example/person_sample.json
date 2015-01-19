@@ -1,0 +1,11 @@
+{
+  "firstName": "George",
+  "lastName": "Washington",
+  "birthday": "2014-02-11",
+  "address": {
+    "streetAddress": "3200 Mount Vernon Memorial Highway",
+    "city": "Mount Vernon",
+    "state": "Virginia",
+    "country": "United States"
+  }
+}

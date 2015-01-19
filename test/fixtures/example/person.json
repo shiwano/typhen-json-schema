@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Person",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "birthday": {
+      "format": "date",
+      "type": "string"
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "streetAddress": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["streetAddress", "city", "state", "country"]
+    }
+  },
+  "additionalProperties": false,
+  "required": ["firstName", "lastName", "birthday", "address"]
+}
