@@ -49,7 +49,8 @@ module.exports = function(typhen, options) {
     namespaceSeparator: '/',
     customPrimitiveTypes: ['integer'],
     disallow: {
-      any: true
+      any: true,
+      unionType: true
     },
     handlebarsOptions: {
       data: options,
