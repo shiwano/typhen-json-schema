@@ -50,6 +50,46 @@ Default value: `'integer'`
 
 A value that specifies enum value. It is either `string` or `integer`.
 
+### Validations
+
+You can define validation rules by adding tags in documentation comments like the below.
+
+```ts
+  /**
+    @minimum 0
+    @exclusiveMinimum
+   */
+  price: number;
+```
+
+#### string validations
+
+* @minLength {number}
+* @maxLength {number}
+* @pattern {string}
+* @format {string}
+* @default {string}
+
+#### number validations
+
+* @multipleOf {number}
+* @minimum {number}
+* @maximum {number}
+* @exclusiveMinimum
+* @exclusiveMaximum
+* @default {number}
+
+#### object validations
+
+* @minProperties {number}
+* @maxProperties {number}
+
+#### array validations
+
+* @minItems {number}
+* @maxItems {number}
+* @uniqueItems
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [gulp.js](http://gulpjs.com/).
 
