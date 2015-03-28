@@ -1,3 +1,7 @@
+/* tslint:disable: class-name */
+
+interface integer {}
+
 declare module Example {
   /** A product from "Acme"'s catalog */
   interface Product {

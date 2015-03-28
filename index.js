@@ -47,6 +47,7 @@ module.exports = function(typhen, options) {
   return typhen.createPlugin({
     pluginDirectory: __dirname,
     namespaceSeparator: '/',
+    customPrimitiveTypes: ['integer'],
     disallow: {
       any: true
     },

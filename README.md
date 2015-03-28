@@ -30,6 +30,12 @@ module.exports = function(typhen) {
 };
 ```
 
+If you want to use an `integer` type of JSON Schema, you will add the interface declaration like the below to the beginning of a file.
+
+```ts
+interface integer {}
+```
+
 ### Options
 
 #### baseUri
