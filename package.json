@@ -40,7 +40,7 @@
     "run-sequence": "^1.0.2",
     "tv4": "^1.1.5",
     "tv4-formats": "^0.5.1",
-    "typhen": "^0.3.0"
+    "typhen": "^0.4.0"
   },
   "keywords": [
     "typhen",
