@@ -90,9 +90,13 @@ module.exports = function(typhen, options) {
             return;
           }
         },
-        typeProperty: function(type) {
+        typeProperty: function(type, tagTable) {
           if (type.isPrimitiveType) {
-            return '"type": "' + type.name + '"';
+            if (type.name === 'number' && tagTable.integer) {
+              return '"type": "integer"';
+            } else {
+              return '"type": "' + type.name + '"';
+            }
           } else if (type.isEnum) {
             return '"enum": [' + getEnumValues(type) + ']';
           } else {

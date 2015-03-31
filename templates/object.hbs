@@ -27,7 +27,7 @@
     {{#if type.isObjectType}}
     {{> object type}}
     {{else}}
-    {{{typeProperty type}}}
+    {{{typeProperty type tagTable}}}
     {{/if}}
   {{/or}}
   }{{#unless @last}},{{/unless}}

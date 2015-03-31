@@ -38,6 +38,10 @@ declare module Example {
       state: string;
       country: string;
     }
+    /**
+      @integer
+    */
+    age: number;
   }
 
   interface Company {

@@ -32,8 +32,12 @@
       },
       "additionalProperties": false,
       "required": ["streetAddress", "city", "state", "country"]
+    },
+    "age": {
+      
+      "type": "integer"
     }
   },
   "additionalProperties": false,
-  "required": ["firstName", "lastName", "birthday", "address"]
+  "required": ["firstName", "lastName", "birthday", "address", "age"]
 }
