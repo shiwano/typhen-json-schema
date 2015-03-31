@@ -70,7 +70,7 @@ module.exports = function(typhen, options) {
         },
         keyword: function(type, tag) {
           var keywordsByType;
-          if (type.name === 'number') {
+          if (type.name === 'number' || type.name === 'integer') {
             keywordsByType = keywords.number;
           } else if (type.name === 'string') {
             keywordsByType = keywords.string;
@@ -86,7 +86,7 @@ module.exports = function(typhen, options) {
               return '"' + tag.name + '": ' + tag[keywordsByType[tag.name]] + ',';
             }
           } else {
-            typhen.logger.warn('Unsupported tag: ' + tag.name);
+            typhen.logger.debug('Unsupported tag: ' + tag.name);
             return;
           }
         },

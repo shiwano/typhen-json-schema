@@ -70,7 +70,7 @@ You can define validation rules by adding tags in documentation comments like th
 * @format {string}
 * @default {string}
 
-#### number validations
+#### number or integer validations
 
 * @multipleOf {number}
 * @minimum {number}

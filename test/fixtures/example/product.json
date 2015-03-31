@@ -5,7 +5,9 @@
   "type": "object",
   "properties": {
     "id": {
-      "description": "The unique identifier for a product ",
+      "description": "The unique identifier for a product",
+      "minimum": 0,
+      "exclusiveMinimum": true,
       "type": "integer"
     },
     "name": {

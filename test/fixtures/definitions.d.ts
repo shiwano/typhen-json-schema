@@ -5,7 +5,11 @@ interface integer {}
 declare module Example {
   /** A product from "Acme"'s catalog */
   interface Product {
-    /** The unique identifier for a product */
+    /**
+      The unique identifier for a product
+      @minimum 0
+      @exclusiveMinimum
+    */
     id: integer;
     /** Name of the product */
     name: string;
