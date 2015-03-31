@@ -1,7 +1,7 @@
 {
   "name": "typhen-json-schema",
   "description": "A typhen plugin for JSON Schema",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/shiwano/typhen-json-schema",
   "author": {
     "name": "Shogo Iwano",
