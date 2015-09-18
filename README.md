@@ -1,6 +1,6 @@
 # typhen-json-schema [![Build Status](https://secure.travis-ci.org/shiwano/typhen-json-schema.png?branch=master)](http://travis-ci.org/shiwano/typhen-json-schema) [![npm version](https://badge.fury.io/js/typhen-json-schema.svg)](http://badge.fury.io/js/typhen-json-schema)
 
-> A typhen plugin for JSON Schema
+> Converts TypeScript Interfaces to JSON Schema
 
 ## Getting Started
 If you haven't used [typhen](https://github.com/shiwano/typhen) before, be sure to check out the README.

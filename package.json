@@ -1,6 +1,6 @@
 {
   "name": "typhen-json-schema",
-  "description": "A typhen plugin for JSON Schema",
+  "description": "Converts TypeScript Interfaces to JSON Schema",
   "version": "0.2.1",
   "homepage": "https://github.com/shiwano/typhen-json-schema",
   "author": {
@@ -43,6 +43,7 @@
     "typhen": "^0.4.0"
   },
   "keywords": [
+    "typescript",
     "typhen",
     "jsonschema"
   ],
