@@ -18,7 +18,7 @@ In your project's typhenfile.js, add code for using the plugin.
 ```js
 module.exports = function(typhen) {
   var plugin = typhen.loadPlugin('typhen-json-schema', {
-    baseUri: 'http://example.com/my-schema'
+    baseUri: 'http://example.com/my-schema',
     enumType: 'string'
   });
 
