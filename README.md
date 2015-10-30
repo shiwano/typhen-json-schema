@@ -100,6 +100,11 @@ You can define validation rules by adding tags in documentation comments like th
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [gulp.js](http://gulpjs.com/).
 
+## Contributors
+
+* Shogo Iwano (@shiwano)
+* Horiuchi_H (@horiuchi)
+
 ## License
 Copyright (c) 2015 Shogo Iwano
 Licensed under the MIT license.
