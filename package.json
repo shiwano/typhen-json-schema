@@ -1,7 +1,7 @@
 {
   "name": "typhen-json-schema",
   "description": "Converts TypeScript Interfaces to JSON Schema",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "homepage": "https://github.com/shiwano/typhen-json-schema",
   "author": {
     "name": "Shogo Iwano",
