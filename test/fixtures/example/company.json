@@ -7,8 +7,12 @@
     "companyId": {
       "type": "array",
       "items": [
-        { "type": "string" },
-        { "type": "number" }
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
       ]
     },
     "persons": {
@@ -25,5 +29,9 @@
     }
   },
   "additionalProperties": false,
-  "required": ["companyId", "persons", "products"]
+  "required": [
+    "companyId",
+    "persons",
+    "products"
+  ]
 }

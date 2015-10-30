@@ -49,4 +49,18 @@ declare module Example {
     persons: Person[];
     products: Product[];
   }
+
+  /** @integer */
+  type Int = number;
+  type Value = number | string;
+  type StrArray = string[];
+
+  interface UnionTest {
+    i1: integer;
+    i2: Int;  // TODO expected `integer` type but actual `number` type
+    v: Value;
+    varray: [Value, Value];
+    scale: number | [number, number];
+    strs: StrArray;
+  }
 }

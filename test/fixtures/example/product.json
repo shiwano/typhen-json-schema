@@ -29,5 +29,9 @@
     }
   },
   "additionalProperties": false,
-  "required": ["id", "name", "price"]
+  "required": [
+    "id",
+    "name",
+    "price"
+  ]
 }

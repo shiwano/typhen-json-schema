@@ -31,6 +31,7 @@ var keywords = {
     uniqueItems: 'boolean'
   }
 };
+var aliasMap = {};
 
 module.exports = function(typhen, options) {
   options = _.defaults(options, {
@@ -41,7 +42,11 @@ module.exports = function(typhen, options) {
   function getEnumValues(enumSymbol) {
     return enumSymbol.members.map(function(m) {
       return options.enumType === 'string' ? '"' + m.name + '"' : m.value;
-    }).join('');
+    }).join(', ');
+  }
+
+  function formatResult(file) {
+    file.contents = new Buffer(JSON.stringify(JSON.parse(file.contents.toString()), null, 2));
   }
 
   return typhen.createPlugin({
@@ -49,13 +54,13 @@ module.exports = function(typhen, options) {
     namespaceSeparator: '/',
     customPrimitiveTypes: ['integer'],
     disallow: {
-      any: true,
-      unionType: true
+      any: true
     },
     handlebarsOptions: {
       data: options,
       partials: {
-        object: fs.readFileSync(__dirname + '/templates/object.hbs', 'utf-8')
+        object: fs.readFileSync(__dirname + '/templates/object.hbs', 'utf-8'),
+        type: fs.readFileSync(__dirname + '/templates/type.hbs', 'utf-8')
       },
       helpers: {
         escape: function(str) {
@@ -92,7 +97,7 @@ module.exports = function(typhen, options) {
         },
         typeProperty: function(type, tagTable) {
           if (type.isPrimitiveType) {
-            if (type.name === 'number' && tagTable.integer) {
+            if (type.name === 'number' && tagTable && tagTable.integer) {
               return '"type": "integer"';
             } else {
               return '"type": "' + type.name + '"';
@@ -108,15 +113,30 @@ module.exports = function(typhen, options) {
       }
     },
 
-    generate: function(generator, types) {
+    generate: function(generator, types, modules) {
+      modules.forEach(function(type) {
+        type.typeAliases.forEach(function(alias) {
+          if (_.isEmpty(alias.type.rawName)) {
+            aliasMap[alias.type.name] = alias.name;
+            if (alias.docComment) {
+              alias.type.docComment = alias.docComment;
+            }
+            formatResult(generator.generate('templates/base.hbs', 'underscore:**/*.json', alias));
+          }
+        });
+      });
       types.forEach(function(type) {
         switch (type.kind) {
           case typhen.SymbolKind.Interface:
           case typhen.SymbolKind.Class:
-            generator.generate('templates/base.hbs', 'underscore:**/*.json', type);
+            formatResult(generator.generate('templates/base.hbs', 'underscore:**/*.json', type));
             break;
         }
       });
+    },
+
+    rename: function(type, name) {
+      return aliasMap[name] || name;
     }
   });
 };

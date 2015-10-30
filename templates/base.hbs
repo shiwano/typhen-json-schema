@@ -2,5 +2,9 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "{{name}}",
   "description": "{{{escape comment}}}",
+{{#or this.isObjectType this.isInterface this.isClass}}
   {{> object this}}
+{{else}}
+  {{> type this}}
+{{/or}}
 }
