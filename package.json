@@ -14,12 +14,7 @@
   "bugs": {
     "url": "https://github.com/shiwano/typhen-json-schema/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shiwano/typhen-json-schema/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "main": "index",
   "engines": {
     "node": ">= 0.10.0",
