@@ -31,13 +31,23 @@
         }
       },
       "additionalProperties": false,
-      "required": ["streetAddress", "city", "state", "country"]
+      "required": [
+        "streetAddress",
+        "city",
+        "state",
+        "country"
+      ]
     },
     "age": {
-      
       "type": "integer"
     }
   },
   "additionalProperties": false,
-  "required": ["firstName", "lastName", "birthday", "address", "age"]
+  "required": [
+    "firstName",
+    "lastName",
+    "birthday",
+    "address",
+    "age"
+  ]
 }

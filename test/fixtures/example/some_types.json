@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "SomeTypes",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "i1": {
+      "type": "integer"
+    },
+    "i2": {
+      "type": "number"
+    },
+    "v": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "varray": {
+      "type": "array",
+      "items": [
+        {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        },
+        {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "scale": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "strs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "x": {}
+  },
+  "additionalProperties": false,
+  "required": [
+    "i1",
+    "i2",
+    "v",
+    "varray",
+    "scale",
+    "strs",
+    "x"
+  ]
+}
