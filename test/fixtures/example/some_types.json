@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "UnionTest",
+  "title": "SomeTypes",
   "description": "",
   "type": "object",
   "properties": {
@@ -68,7 +68,8 @@
       "items": {
         "type": "string"
       }
-    }
+    },
+    "x": {}
   },
   "additionalProperties": false,
   "required": [
@@ -77,6 +78,7 @@
     "v",
     "varray",
     "scale",
-    "strs"
+    "strs",
+    "x"
   ]
 }

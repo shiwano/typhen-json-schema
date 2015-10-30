@@ -4,5 +4,6 @@
   "v": "value",
   "varray": [1, "2"],
   "scale": [0.5, 1],
-  "strs": ["a", "b", "c"]
+  "strs": ["a", "b", "c"],
+  "x": { "foo": "bar", "null": null }
 }

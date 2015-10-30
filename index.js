@@ -53,9 +53,6 @@ module.exports = function(typhen, options) {
     pluginDirectory: __dirname,
     namespaceSeparator: '/',
     customPrimitiveTypes: ['integer'],
-    disallow: {
-      any: true
-    },
     handlebarsOptions: {
       data: options,
       partials: {
@@ -97,7 +94,9 @@ module.exports = function(typhen, options) {
         },
         typeProperty: function(type, tagTable) {
           if (type.isPrimitiveType) {
-            if (type.name === 'number' && tagTable && tagTable.integer) {
+            if (type.name === 'any') {
+              return;
+            } else if (type.name === 'number' && tagTable && tagTable.integer) {
               return '"type": "integer"';
             } else {
               return '"type": "' + type.name + '"';

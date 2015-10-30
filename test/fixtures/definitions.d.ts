@@ -55,12 +55,13 @@ declare module Example {
   type Value = number | string;
   type StrArray = string[];
 
-  interface UnionTest {
+  interface SomeTypes {
     i1: integer;
     i2: Int;  // TODO expected `integer` type but actual `number` type
     v: Value;
     varray: [Value, Value];
     scale: number | [number, number];
     strs: StrArray;
+    x: any;
   }
 }
