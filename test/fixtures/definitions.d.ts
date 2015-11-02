@@ -64,4 +64,15 @@ declare module Example {
     strs: StrArray;
     x: any;
   }
+
+  interface Indexed1 {
+    [key: string]: string;
+  }
+  interface Indexed2 {
+    [key: string]: SomeTypes;
+  }
+  interface Indexed3 {
+    [key: string]: any;
+  }
 }
+

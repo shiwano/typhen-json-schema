@@ -14,5 +14,10 @@
   }{{#unless @last}},{{/unless}}
 {{/each}}
 },
-"additionalProperties": false,
+"additionalProperties":
+  {{#if stringIndexType}}
+    { {{> type type=stringIndexType}} },
+  {{else}}
+    false,
+  {{/if}}
 "required": [{{{required properties}}}]
