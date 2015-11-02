@@ -1,0 +1,11 @@
+{
+  "someType": {
+    "i1": 123,
+    "i2": 2468,
+    "v": "value",
+    "varray": [1, "2"],
+    "scale": 0.5,
+    "strs": ["a", "b", "c"],
+    "x": null
+  }
+}

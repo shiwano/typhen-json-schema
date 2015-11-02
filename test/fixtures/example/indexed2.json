@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Indexed2",
+  "description": "",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": {
+    "$ref": "http://example.com/typhen-json-schema/example/some_types.json"
+  },
+  "required": []
+}
