@@ -13,7 +13,8 @@ var paths = {
 };
 
 var mochaOptions = {
-  reporter: 'spec'
+  reporter: 'spec',
+  timeout: 10000
 };
 
 gulp.task('jshint', function() {
