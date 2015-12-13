@@ -13,21 +13,29 @@ $ typhen --plugin typhen-json-schema --dest generated definitions.d.ts
 ## The "typhen-json-schema" plugin
 
 ### Overview
-In your project's typhenfile.js, add code for using the plugin.
+In your project's tsconfig.json, add settings for using the plugin.
 
 ```js
-module.exports = function(typhen) {
-  var plugin = typhen.loadPlugin('typhen-json-schema', {
-    baseUri: 'http://example.com/my-schema',
-    enumType: 'string'
-  });
-
-  return typhen.run({
-    plugin: plugin,
-    src: 'typings/lib/definitions.d.ts',
-    dest: 'generated'
-  });
-};
+{
+  "files": [
+    "src/index.ts"
+  ],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5"
+  },
+  "typhen": [
+    {
+      "plugin": "typhen-json-schema",
+      "pluginOptions": {
+        "baseUri": "http://example.com/my-schema",
+        "enumType": "string"
+      },
+      "outDir": "output-directory",
+      "files": [ "typings/json.d.ts" ]
+    }
+  ]
+}
 ```
 
 If you want to use an `integer` type of JSON Schema, you will add the interface declaration to the beginning of a file, or add `@integer` tag to number's documentation comments.
