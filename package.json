@@ -24,18 +24,19 @@
     "test": "./node_modules/gulp/bin/gulp.js"
   },
   "devDependencies": {
-    "del": "^1.1.1",
-    "glob": "^5.0.3",
+    "del": "^2.2.0",
+    "glob": "^6.0.1",
     "gulp": "^3.8.11",
-    "gulp-jshint": "^1.9.4",
-    "gulp-load-plugins": "^0.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
     "gulp-plumber": "^1.0.0",
     "gulp-spawn-mocha": "^2.0.1",
+    "jshint": "^2.9.1-rc1",
     "rimraf": "^2.3.2",
     "run-sequence": "^1.0.2",
     "tv4": "^1.1.9",
     "tv4-formats": "^1.0.0",
-    "typhen": "^0.4.0"
+    "typhen": "^0.7.4"
   },
   "keywords": [
     "typescript",
