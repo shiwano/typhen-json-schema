@@ -6,7 +6,13 @@
 If you haven't used [typhen](https://github.com/shiwano/typhen) before, be sure to check out the README.
 
 ```sh
-$ npm install -g typhen typhen-json-schema
+$ npm install --save-dev typhen-json-schema
+$ vi tsconfig.json # Add settings.
+$ typhen
+```
+
+```sh
+$ npm install -g typhen-json-schema
 $ typhen --plugin typhen-json-schema --dest generated definitions.d.ts
 ```
 
