@@ -118,6 +118,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 * Shogo Iwano (@shiwano)
 * Horiuchi_H (@horiuchi)
+* @nabilnaffar
 
 ## License
 Copyright (c) 2015 Shogo Iwano
