@@ -20,4 +20,6 @@
   {{else}}
     false,
   {{/if}}
-"required": [{{{required properties}}}]
+{{#if (required properties) }}
+  ,"required": [{{{required properties}}}]
+{{/if}}
