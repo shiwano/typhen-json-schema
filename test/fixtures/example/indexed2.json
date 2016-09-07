@@ -6,6 +6,5 @@
   "properties": {},
   "additionalProperties": {
     "$ref": "http://example.com/typhen-json-schema/example/some_types.json"
-  },
-  "required": []
+  }
 }
