@@ -4,6 +4,5 @@
   "description": "",
   "type": "object",
   "properties": {},
-  "additionalProperties": {},
-  "required": []
+  "additionalProperties": {}
 }

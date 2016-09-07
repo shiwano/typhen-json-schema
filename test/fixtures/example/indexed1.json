@@ -6,6 +6,5 @@
   "properties": {},
   "additionalProperties": {
     "type": "string"
-  },
-  "required": []
+  }
 }
