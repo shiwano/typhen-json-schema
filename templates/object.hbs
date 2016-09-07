@@ -16,8 +16,10 @@
 },
 "additionalProperties":
   {{#if stringIndexType}}
-    { {{> type type=stringIndexType}} },
+    { {{> type type=stringIndexType}} }
   {{else}}
-    false,
+    false
   {{/if}}
-"required": [{{{required properties}}}]
+{{#if (required properties) }}
+,"required": [{{{required properties}}}]
+{{/if}}
