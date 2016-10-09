@@ -37,7 +37,7 @@
     "run-sequence": "^1.0.2",
     "tv4": "^1.1.9",
     "tv4-formats": "^2.2.0",
-    "typhen": "^0.8.1"
+    "typhen": "^1.0.0"
   },
   "keywords": [
     "typescript",
