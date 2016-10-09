@@ -15,8 +15,8 @@
 {{/each}}
 },
 "additionalProperties":
-  {{#if stringIndexType}}
-    { {{> type type=stringIndexType}} }
+  {{#if stringIndex}}
+    { {{> type type=stringIndex.type}} }
   {{else}}
     false
   {{/if}}
