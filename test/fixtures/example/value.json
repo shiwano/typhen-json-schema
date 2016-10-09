@@ -4,10 +4,10 @@
   "description": "",
   "anyOf": [
     {
-      "type": "number"
+      "type": "string"
     },
     {
-      "type": "string"
+      "type": "number"
     }
   ]
 }

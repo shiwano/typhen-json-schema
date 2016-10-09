@@ -13,10 +13,10 @@
     "v": {
       "anyOf": [
         {
-          "type": "number"
+          "type": "string"
         },
         {
-          "type": "string"
+          "type": "number"
         }
       ]
     },
@@ -26,20 +26,20 @@
         {
           "anyOf": [
             {
-              "type": "number"
+              "type": "string"
             },
             {
-              "type": "string"
+              "type": "number"
             }
           ]
         },
         {
           "anyOf": [
             {
-              "type": "number"
+              "type": "string"
             },
             {
-              "type": "string"
+              "type": "number"
             }
           ]
         }
