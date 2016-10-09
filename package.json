@@ -17,7 +17,7 @@
   "license": "MIT",
   "main": "index",
   "engines": {
-    "node": ">= 0.10.0",
+    "node": ">= 0.4.0",
     "npm": ">= 1.4.0"
   },
   "scripts": {
