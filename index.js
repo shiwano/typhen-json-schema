@@ -133,6 +133,9 @@ module.exports = function(typhen, options) {
         });
       });
       types.forEach(function(type) {
+        if (type.numberIndex) {
+          typhen.logger.warn('non-string JSON property keys are not supported:', type.name);
+        }
         switch (type.kind) {
           case typhen.SymbolKind.Interface:
           case typhen.SymbolKind.Class:
