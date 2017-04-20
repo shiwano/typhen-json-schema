@@ -74,5 +74,13 @@ declare module Example {
   interface Indexed3 {
     [key: string]: any;
   }
+
+  enum Enum {
+    A = 100,
+    B = 200,
+  }
+  interface LiteralType {
+    value: "foo" | 0 | false | Enum.A;
+  }
 }
 

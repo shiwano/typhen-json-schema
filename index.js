@@ -40,9 +40,11 @@ module.exports = function(typhen, options) {
   });
 
   function getEnumValues(enumSymbol) {
-    return enumSymbol.members.map(function(m) {
-      return options.enumType === 'string' ? '"' + m.name + '"' : m.value;
-    }).join(', ');
+    return enumSymbol.members.map(getEnumValue).join(', ');
+  }
+
+  function getEnumValue(enumMemberSymbol) {
+    return options.enumType === 'string' ? '"' + enumMemberSymbol.name + '"' : enumMemberSymbol.value;
   }
 
   function formatResult(file) {
@@ -103,6 +105,12 @@ module.exports = function(typhen, options) {
             }
           } else if (type.isEnum) {
             return '"enum": [' + getEnumValues(type) + ']';
+          } else if (type.isLiteralType) {
+            if (type.isEnumLiteralType) {
+              return '"enum": [' + getEnumValue(type.enumMember) + ']';
+            } else {
+              return '"enum": [' + type.name + ']';
+            }
           } else {
             var pathSegments = _.flatten([type.ancestorModules.map(function(m) { return m.name; }), type.name], true);
             var typePath = pathSegments.map(function(s) { return inflection.underscore(s); }).join('/');
