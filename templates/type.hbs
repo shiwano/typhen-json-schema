@@ -1,28 +1,32 @@
-{{#or type.isUnionType type.isArray type.isTuple}}
-  {{#if type.isUnionType}}
-    "anyOf": [
+{{#if type.isUnionType}}
+  "anyOf": [
+    {{#each type.types}}
+      { {{> type type=this }} }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ]
+{{else or type.isArray type.isTuple}}
+  "type": "array",
+  {{#if type.isArray}}
+    "items": {
+      {{> type type}}
+    }
+  {{else}}
+    "items": [
       {{#each type.types}}
         { {{> type type=this }} }{{#unless @last}},{{/unless}}
       {{/each}}
     ]
-  {{else}}
-    "type": "array",
-    {{#if type.isArray}}
-      "items": {
-        {{> type type}}
-      }
-    {{else}}
-      "items": [
-        {{#each type.types}}
-          { {{> type type=this }} }{{#unless @last}},{{/unless}}
-        {{/each}}
-      ]
-    {{/if}}
   {{/if}}
+{{else if type.isIntersectionType}}
+  "allOf": [
+    {{#each type.types}}
+      { {{> type type=this additionalProperties=true }} }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ]
+{{else if type.isObjectType}}
+  {{> object type additionalProperties=additionalProperties}}
+{{else and type.isObjectLikeType additionalProperties}}
+  {{> object type additionalProperties=true}}
 {{else}}
-  {{#if type.isObjectType}}
-    {{> object type}}
-  {{else}}
-    {{{typeProperty type tagTable}}}
-  {{/if}}
-{{/or}}
+  {{{typeProperty type tagTable}}}
+{{/if}}

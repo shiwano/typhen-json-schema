@@ -82,5 +82,9 @@ declare module Example {
   interface LiteralType {
     value: "foo" | 0 | false | Enum.A;
   }
+
+  interface IntersectionType {
+    foobar: { foo: string; } & { bar: string; };
+  }
 }
 

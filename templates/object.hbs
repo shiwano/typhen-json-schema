@@ -1,4 +1,5 @@
 "type": "object",
+
 "properties": {
 {{#each properties}}
   "{{name}}": {
@@ -13,13 +14,17 @@
   {{> type this }}
   }{{#unless @last}},{{/unless}}
 {{/each}}
-},
-"additionalProperties":
+}
+
+{{#unless additionalProperties}}
+,"additionalProperties":
   {{#if stringIndex}}
     { {{> type type=stringIndex.type}} }
   {{else}}
     false
   {{/if}}
+{{/unless}}
+
 {{#if (required properties) }}
 ,"required": [{{{required properties}}}]
 {{/if}}
